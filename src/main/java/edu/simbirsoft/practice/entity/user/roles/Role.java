@@ -1,4 +1,4 @@
-package edu.simbirsoft.practice.entity;
+package edu.simbirsoft.practice.entity.user.roles;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -13,6 +13,8 @@ public class Role {
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "role")
     private Set<UserToRole> userToRoles;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "role")
+    private Set<RoleToPermission> roleToPermissions;
 
     public void setId(Long id) {
         this.id = id;

@@ -1,6 +1,4 @@
-package edu.simbirsoft.practice.entity;
-
-import com.sun.jdi.connect.TransportTimeoutException;
+package edu.simbirsoft.practice.entity.project.release;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;

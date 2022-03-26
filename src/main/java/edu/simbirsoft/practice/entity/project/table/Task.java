@@ -1,4 +1,7 @@
-package edu.simbirsoft.practice.entity;
+package edu.simbirsoft.practice.entity.project.table;
+
+import edu.simbirsoft.practice.entity.project.release.TaskToRelease;
+import edu.simbirsoft.practice.entity.user.User;
 
 import javax.persistence.*;
 import java.util.Set;
@@ -13,8 +16,8 @@ public class Task {
     @OneToOne
     private User author;
 
-    //TODO: add enum for statuses
-    private String status;
+    @Enumerated(value = EnumType.STRING)
+    private TaskStatus status;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "task")
     private Set<TaskToRelease> taskToReleases;
@@ -25,21 +28,21 @@ public class Task {
     public Task() {
     }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
-
     @Id
     @GeneratedValue
     public Long getId() {
         return id;
     }
 
-    public String getStatus() {
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public TaskStatus getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(TaskStatus status) {
         this.status = status;
     }
 }

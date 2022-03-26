@@ -1,4 +1,4 @@
-package edu.simbirsoft.practice.entity;
+package edu.simbirsoft.practice.entity.project.roles;
 
 import javax.persistence.Column;
 import javax.persistence.Embeddable;

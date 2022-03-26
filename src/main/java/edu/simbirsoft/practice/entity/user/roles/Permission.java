@@ -1,16 +1,14 @@
-package edu.simbirsoft.practice.entity;
+package edu.simbirsoft.practice.entity.user.roles;
 
 import javax.persistence.*;
 import java.util.Set;
 
 @Entity
-public class ProjectRole {
+public class Permission {
     private Long id;
 
-    private String name;
-
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "projectRole")
-    private Set<ProjectUserToRole> projectUserToRoles;
+    @OneToMany(mappedBy = "permission")
+    private Set<RoleToPermission> roleToPermission;
 
     @Id
     @GeneratedValue
@@ -22,3 +20,4 @@ public class ProjectRole {
         this.id = id;
     }
 }
+

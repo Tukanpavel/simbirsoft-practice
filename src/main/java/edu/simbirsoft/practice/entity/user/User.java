@@ -1,4 +1,7 @@
-package edu.simbirsoft.practice.entity;
+package edu.simbirsoft.practice.entity.user;
+
+import edu.simbirsoft.practice.entity.project.roles.ProjectUserToRole;
+import edu.simbirsoft.practice.entity.user.roles.UserToRole;
 
 import javax.persistence.Table;
 import javax.persistence.*;

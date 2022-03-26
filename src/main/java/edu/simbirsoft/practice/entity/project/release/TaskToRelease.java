@@ -1,4 +1,8 @@
-package edu.simbirsoft.practice.entity;
+package edu.simbirsoft.practice.entity.project.release;
+
+import edu.simbirsoft.practice.entity.project.release.Release;
+import edu.simbirsoft.practice.entity.project.release.TaskToReleaseKey;
+import edu.simbirsoft.practice.entity.project.table.Task;
 
 import javax.persistence.Table;
 import javax.persistence.*;

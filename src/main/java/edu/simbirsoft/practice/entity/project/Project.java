@@ -1,4 +1,6 @@
-package edu.simbirsoft.practice.entity;
+package edu.simbirsoft.practice.entity.project;
+
+import edu.simbirsoft.practice.entity.project.roles.ProjectUserToRole;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;

@@ -1,14 +1,14 @@
-package edu.simbirsoft.practice.entity;
+package edu.simbirsoft.practice.entity.user.roles;
 
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 import java.io.Serializable;
 
 @Embeddable
-public class TaskToUserKey implements Serializable {
-    @Column(name = "task_id")
-    private Long taskId;
-
+public class UserToRoleKey implements Serializable {
     @Column(name = "user_id")
     private Long userId;
+
+    @Column(name = "role_id")
+    private Long roleId;
 }
